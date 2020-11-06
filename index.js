@@ -78,8 +78,54 @@ function lorgestNumberInArr(arr) {
 let arrNumbars = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 console.log("Lorgest Number in Array", lorgestNumberInArr(arrNumbars));
 
-// 6. 
+function longestOfFour(arr) {
+    return arr.map(group => Math.max(...group));
+}
+let longestArr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]];
+console.log("Longest of four ",longestOfFour(longestArr));
 
+// 6. confirm the ending
+
+function confirmEnding(str, target) {
+    return str.slice(str.length - target.length) === target;
+}
+console.log("confirm Ending ", confirmEnding("the test the end point !", "!"));
+
+// 7. truncate a string
+
+function truncateString(str, n) {
+    if (str.length > n) {
+        return str.slice(0, n) + "...";
+    }
+    return str;
+
+    //single line code
+    // return str.length > n ? str.slice(0, n) + "..." : str;
+}
+console.log("truncate a string : ", truncateString("the simple content goes here!!!!!!", 28));
+
+// 8. Finders Keepers
+
+function findElement(arr, el) {
+    return arr.find(item => item === el);
+}
+console.log("find element in a array ", findElement([1, 2, "Test", 5], "Test"));
+
+// 9. Boo who
+
+function boowho(bool) {
+    return typeof bool === "boolean";
+}
+console.log("check boolean value : ", boowho(true));
+
+// 10. title case a sentence
+
+function titleCaseSentence(str) {
+    return str.toLowerCase().split(" ").map(item => {
+        return item.replace(item.charAt(0), item.charAt(0).toUpperCase());
+    }).join(" ");
+}
+console.log("Title case sentense : ", titleCaseSentence("the sentence goes here"));
 
 
 
